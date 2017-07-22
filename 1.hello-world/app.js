@@ -5,7 +5,10 @@ import Demo, {DemoForm} from "./src/demo";
 class App extends React.Component
 {
     render(){
-        return <DemoForm/>;
+        return <div>
+            <Demo/>
+            <DemoForm/>
+            </div>;
     }
 }
 ReactDom.render(
