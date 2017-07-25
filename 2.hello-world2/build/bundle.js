@@ -22551,6 +22551,11 @@ var AppendArrayList = exports.AppendArrayList = function (_React$Component5) {
     }
 
     _createClass(AppendArrayList, [{
+        key: 'componentWillUpdate',
+        value: function componentWillUpdate(nextState) {
+            nextState.invalidData = !nextState.number;
+        }
+    }, {
         key: 'handleChange',
         value: function handleChange(event) {
             this.setState({
@@ -22576,6 +22581,7 @@ var AppendArrayList = exports.AppendArrayList = function (_React$Component5) {
                     number
                 );
             });
+            var isEnabled = this.state.bufferValue !== "";
             return _react2.default.createElement(
                 'div',
                 null,
@@ -22587,8 +22593,8 @@ var AppendArrayList = exports.AppendArrayList = function (_React$Component5) {
                         null,
                         'Number'
                     ),
-                    _react2.default.createElement('input', { type: 'text', name: 'number', value: this.state.bufferValue, onChange: this.handleChange }),
-                    _react2.default.createElement('input', { type: 'submit', value: 'submit' })
+                    _react2.default.createElement('input', { type: 'number', name: 'number', value: this.state.bufferValue, onChange: this.handleChange }),
+                    _react2.default.createElement('input', { type: 'submit', value: 'submit', disabled: !isEnabled })
                 ),
                 _react2.default.createElement(
                     'ul',

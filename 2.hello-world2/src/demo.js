@@ -111,6 +111,9 @@ export class AppendArrayList extends React.Component
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
+    componentWillUpdate(nextState) {
+        nextState.invalidData = !(nextState.number);
+    }
     handleChange(event)
     {
         this.setState({
@@ -131,11 +134,12 @@ export class AppendArrayList extends React.Component
                 {number}
             </li>
         );
+        const isEnabled= this.state.bufferValue !=="";
         return <div>
             <form method="post" onSubmit={this.handleSubmit}>
                 <label>Number</label>
                 <input type="number" name="number" value={this.state.bufferValue} onChange={this.handleChange}></input>
-                <input type="submit" value="submit"></input>
+                <input type="submit" value="submit" disabled={!isEnabled}></input>
             </form>
             <ul>
                 {listItems}
