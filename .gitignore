@@ -57,3 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
+/2.hello-world2/node_modules/

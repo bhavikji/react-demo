@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";FormDemo
 export default class Demo extends React.Component
 {
     render(){
