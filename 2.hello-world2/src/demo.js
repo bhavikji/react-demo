@@ -58,7 +58,7 @@ export class FormDemo extends React.Component
     }
     handleSubmit(event)
     {
-        event.preventDefault();
+        event.preventDefault();<div><h1 style={{color:'#732584'}}>Form Demo by {this.props.name} from {this.props.company}</h1></div>
         this.setState({
             value: this.state.temp
         });
