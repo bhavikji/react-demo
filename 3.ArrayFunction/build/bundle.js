@@ -9808,6 +9808,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
+    //constructor having old values
+
     function App(props) {
         _classCallCheck(this, App);
 
@@ -9839,6 +9841,9 @@ var App = function (_React$Component) {
                 _react2.default.createElement(_header2.default, { headerTitle: this.state.header })
             );
         }
+
+        /*to change the old value of header*/
+
     }]);
 
     return App;
@@ -22370,6 +22375,8 @@ var Header = function (_React$Component) {
 
     _createClass(Header, [{
         key: 'render',
+
+        /*getting value from app(parent) file*/
         value: function render() {
             return _react2.default.createElement(
                 'div',
@@ -22416,6 +22423,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var AlertFunction = function (_React$Component) {
     _inherits(AlertFunction, _React$Component);
 
+    /*constructor for setting new value*/
     function AlertFunction(props) {
         _classCallCheck(this, AlertFunction);
 
@@ -22430,6 +22438,8 @@ var AlertFunction = function (_React$Component) {
         };
         return _this;
     }
+    //setting new value of header
+
 
     _createClass(AlertFunction, [{
         key: "render",
